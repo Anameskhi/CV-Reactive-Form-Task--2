@@ -120,38 +120,38 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    const user = {
-      firstname: "anuka",
-      lastname: "meskhi",
-      active: true,
-      userContactInfo: {
-        adress: "leselidze str",
-        email: "mesxiana3@gmail.com",
-        phone: "571087888"
-    },
-    education: [
-      {
-        education: "tssu"
-      }
-    ],
-    resource:{
-      github: 'https://github.com/Anameskhi',
-      linkedin: 'https://www.linkedin.com/feed/'
-    },
-    experience: [
-      {
-        company: "unisens",
-        years: "2022"
-      }
-    ]
+    // const user = {
+    //   firstname: "",
+    //   lastname: "",
+    //   active: true,
+    //   userContactInfo: {
+    //     adress: "",
+    //     email: "",
+    //     phone: ""
+    // },
+    // education: [
+    //   {
+    //     education: ""
+    //   }
+    // ],
+    // resource:{
+    //   github: '',
+    //   linkedin: ''
+    // },
+    // experience: [
+    //   {
+    //     company: "",
+    //     years: ""
+    //   }
+    // ]
     
   }
-  this.form.markAllAsTouched();
-  // user.experiences.forEach(()=> this.addExperience())
-  this.form.patchValue(user)
-}
+  // this.form.markAllAsTouched();
+  // // user.experiences.forEach(()=> this.addExperience())
+  // this.form.patchValue(user)
+//}
 submit(){
-
+  this.form.markAllAsTouched();
   console.log(this.form.value)
 }
 

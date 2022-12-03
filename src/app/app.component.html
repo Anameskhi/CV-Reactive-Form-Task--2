@@ -1,7 +1,7 @@
 <br><br>
 <div class="container" >
 <div class="card bg-light" >
-<article class="card-body mx-auto" style="max-width: 700px;" >
+<article class="card-body mx-auto" style="max-width: 800px;" >
 	<h4 class="card-title mt-3 text-center">Create Your CV</h4>
 	
 <hr>
@@ -72,11 +72,11 @@
      
         <input  formControlName="company" [class.is-invalid]="experience.get('company')?.invalid && experience.get('company')?.touched" name="" class="form-control" placeholder="Company" type="text">
   <div *ngIf="experience.get('company')?.invalid && experience.get('company')?.touched"></div>
-    <div *ngIf="experience.get('company')!.errors?.['required']" class="text-danger">Education is required</div>
+    <div *ngIf="experience.get('company')!.errors?.['required']&& experience.get('company')?.touched" class="text-danger">Company is required</div>
   
   <input formControlName="years" [class.is-invalid]="experience.get('years')?.invalid && experience.get('years')?.touched" class="form-control" placeholder="Years"  type="text">
     <div *ngIf="experience.get('years')?.invalid && experience.get('years')?.touched">
-      <div  *ngIf="experience.get('years')!.errors?.['required']" class="text-danger  ">Year is required</div>
+      <div  *ngIf="experience.get('years')!.errors?.['required']&& experience.get('years')?.touched" class="text-danger  ">Year is required</div>
       <div *ngIf="experience.get('years')!.errors?.['pattern']" class="text-danger">Year should be contain 4 digits </div>
     </div> 
 
